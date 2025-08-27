@@ -1,7 +1,10 @@
 const playground = document.querySelector("#playground");
 
-const temporaryElement = document.createElement("p");
-temporaryElement.textContent = "Now you see me...";
-playground.append(temporaryElement);
+const secretScroll = document.createElement("div");
 
-temporaryElement.remove();
+secretScroll.id = "secretScroll";
+secretScroll.dataset.spell = "invisibility";
+secretScroll.dataset.components = "moonlight, shadow essence";
+secretScroll.textContent = "Ancient Spell Scroll";
+
+playground.append(secretScroll);
