@@ -1,1 +1,0 @@
-const grandparent = document.querySelector();
