@@ -1,15 +1,13 @@
-const grandparent = document.querySelector(".grandparent");
-const parent = document.querySelector(".parent");
-const child = document.querySelector(".child");
+const divs = document.querySelectorAll("div");
 
-grandparent.addEventListener("click", (e) => {
-  console.log("Grandparent 1"), { capture: true };
-});
-parent.addEventListener("click", (e) => {
-  console.log("Parent 1"), { capture: true };
-});
-child.addEventListener("click", (e) => {
-  console.log("Child 1"), { capture: true };
+document.addEventListener("click", (e) => {
+  if (e.target.matches("div")) {
+    console.log("Hi");
+  }
 });
 
-// [9:12]
+const newDiv = document.createElement("div");
+newDiv.style.width = "200px";
+newDiv.style.height = "200px";
+newDiv.style.backgroundColor = "purple";
+document.body.append(newDiv);
